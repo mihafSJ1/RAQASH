@@ -1,0 +1,610 @@
+
+*{
+  color: #5c5c5c;
+  font-family: Geneva;
+  box-sizing: border-box;
+}
+body{
+  background-color: #f8f8f8 ;
+}
+
+
+ /*  nav bar */
+
+.menu-bar{
+    background-color: #ede9ea;
+    height: 100px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: x-small;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+    color: #5c5c5c;
+}
+
+.menu-bar ul li{
+    width: 90px;
+    padding-bottom: 3px;
+    margin: 40px 50px 5px 50px;
+}
+
+.menu-bar ul li a{
+    text-decoration: none;
+    color: #5c5c5c;
+    padding: 0.5rem 0;
+    margin: 0 ;
+    position: relative;
+   
+}
+
+.menu-bar ul img{
+    width: 100px;
+    height: 100px;
+
+}
+
+nav ul li a::before,
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #a5afa6;
+    left: 0;
+    transform: scale(0);
+    transition: all .5s;
+}
+
+nav ul li a::before{
+    top: 0;
+    transform-origin: left;
+}
+
+nav ul li a::after{
+    bottom: 0;
+    transform-origin: right;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+    transform: scale(1);
+}
+
+
+/* hello img and hover*/
+
+.badge:hover .text {
+  -webkit-transform: rotate(-45deg) translate(0px) rotate(-315deg);
+          transform: rotate(-45deg) translate(0px) rotate(-315deg);
+  background: #a5afa694;
+ 
+  width: 20rem;
+  letter-spacing: 1rem;
+  line-height: 20rem;
+  height: 20rem;
+  margin-top: -10rem;
+  margin-left: -10rem;
+  -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1), letter-spacing 1.5s ease-out;
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1), letter-spacing 1.5s ease-out;
+}
+.badge .text {
+  display: block;
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  line-height: 10rem;
+  left: 50%;
+  top: 50%;
+  margin-top: -5rem;
+  margin-left: -5rem;
+  font-size: 2rem;
+  text-align: center;
+  color:#5c5c5c;
+  border-radius: 50%;
+  background: #ede9ea;
+  -webkit-transform: rotate(-180deg) translate(-10rem) rotate(180deg);
+          transform: rotate(-180deg) translate(-10rem) rotate(180deg);
+  box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  
+}
+
+.hello{
+padding-top: 150px;
+  min-height: 100%;
+  display: -webkit-box;
+  display: flex;
+          align-items: center;
+          justify-content: center;
+
+}
+
+.content{
+  padding-top: 110px;
+  overflow-x: hidden;
+}
+  
+
+
+
+/* login sigin up buttons */
+/*close button*/
+
+.close {
+ /* cursor: pointer; */
+ z-index: 2;
+ color:black;
+ font-size: 50px;
+   border:none;
+   background: transparent;
+   outline: none;
+}
+
+
+ #signup .close , #forgetPassword .close{
+  position: absolute;
+float: left;
+}
+
+#login .close{
+  position: absolute;
+ float: right;
+ left: 90%;
+}
+
+.inner-buttons{
+  padding-top: 40px;
+  padding-left: 15px;
+ margin: 0 auto;
+  height: 30px;
+  width: 200px;
+letter-spacing: 1px;
+ border: none;
+border-radius: 8px;
+outline: none;
+cursor: pointer;
+
+}
+
+  
+   .btn:hover {
+    background-color: #a5afa6cc;
+    border-color: #a49c9a !important;
+    color: white;
+  }
+
+  
+
+/*  */
+/* titles */
+
+.title{
+  text-transform: uppercase ;
+  color: #5c5c5c;
+  text-align: center;
+  font-size: xx-large;
+  letter-spacing: 2px;
+  content: ""; 
+  display: block; 
+  margin: 0 auto;
+  width: 50%; 
+  padding-top: 20px; 
+  border-bottom: 1.5px solid #a5afa6 ;
+}
+
+#dot{
+    color: #a5afa6;
+}
+
+#signup , #forgetPassword ,  #login{
+z-index: 2;
+  position:fixed;
+  top: 15;
+  left: 0;
+  right: 0;
+  bottom: 10;
+  width: 800px;
+  min-height: 550px;
+  margin: 0 auto;
+  max-width:800px;
+  height: 480px;
+  overflow: hidden;
+  border-radius:10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15),
+  0 10px 10px rgba(0,0,0,0.13);
+  
+}
+
+
+#error {
+  width: 80%;
+background-color: #ffffff8c;
+margin: 5%;
+padding: 5%;
+ border-radius: 5px;
+ line-height: 10px;
+   display:none; 
+  color: #FF0000 ;
+border: 15px;
+
+}
+
+#signup , #forgetPassword{
+  display: none;
+  background:#a5afa6 ;
+  }
+
+  #forgetPassword .formbox{
+margin-top: 10%;
+
+  }
+
+  #login{
+    display: none;
+    background: #ede9ea ;
+    padding: 0%;
+  }
+
+.container .Lleft ,.container .Sright{
+  position:relative;
+ top: 0px;
+ left: 0px;
+  float: left;
+  width: 50%;
+  height:100%;
+  background:#a5afa6 ;
+  margin-left: -15px;
+  overflow: hidden;
+
+
+}
+
+.container .Lleft img , .container .Sright img{
+  position:relative;
+ top: 0px;
+ left: 0px;
+
+}
+
+.container .Lright , .container .Sleft{
+  position:relative;
+ top: 0px;
+ right: 0px;
+  float: right;
+  width: 50%;
+  height:00%;
+  background:#ede9ea ;
+
+}
+.container .Lright .title {
+  position: relative;
+  text-align: center;
+  padding: 100px 0px 0px;
+}
+
+ .formsTitle{
+  position: relative;
+  text-align: center;
+  padding: 20px 100px 5px;
+ text-transform: uppercase;
+}
+
+.formbox{
+  position: relative;
+  text-align: left;
+  width: 100%;
+  padding: 20px 80px;
+  box-sizing: border-box;
+  height: 400px;
+  
+}
+
+
+ .formbox input[type = "text"],
+ .formbox input[type = "password"],
+ .formbox input[type = "submit"],
+ .check textarea{
+ 
+
+  width: 200px;
+
+}
+
+.formbox input[type = "text"],
+.formbox input[type = "password"]{
+  margin-bottom: 25px; /*  changed made  */
+border: none;
+border-bottom: 1px solid #5c5c5c;
+outline: none;
+background: transparent;
+
+
+}
+
+#usernamePass{
+  margin-top: 20%;
+}
+
+.container .Lright .formbox input[type = "text"]:focus,
+.container .Lright .formbox input[type = "password"]:focus{
+border-bottom: 1px solid #a5afa6;
+}
+
+
+.check textarea{
+  display: none;
+margin-top: 5px;
+overflow-x: scroll;
+border: none;
+border-bottom: 1px solid #5c5c5c;
+outline: none;
+width: 200px;
+height: 90px;
+background: transparent;
+}
+
+ .formbox input[type = "submit"]{
+  /* margin-bottom: 10px; */
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+
+}
+/* .Sright .formbox input[type = "submit"]{
+margin-top: 20px;}
+
+.Lright .formbox input[type = "submit"]{
+margin-top: 10%;} */
+
+.container .Lright .formbox input[type = "submit"]:focus{
+background-color: #a5afa6;
+}
+
+.formbox .forgetPass {
+  display: block;
+  margin: 50px 0px 0px 90px;
+}
+.formbox a , .container .Lright .formbox p ,  .container .Sright .formbox p{
+
+  display: inline;
+	font-family: Poppins-Regular;
+	font-size: 14px;
+	line-height: 1.7;
+	margin: 0px;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  text-decoration: none;
+  letter-spacing: 1px;
+  
+}
+.formbox a:hover{
+color: #a5afa6;
+}
+
+.container .Sright .formbox a:hover{
+color: #ede9ea;
+}
+
+.formbox a{
+  font-weight: bold;
+  color: #5c5c5c;
+}
+
+
+.container .Sright .formbox input[type = "text"]:focus,
+.container .Sright .formbox input[type = "password"]:focus,
+.check textarea:focus{
+border-bottom: 3px solid #ede9ea;
+}
+
+
+
+.container .Sright .formbox input[type = "submit"]:hover{
+background-color: #ede9ea;
+}
+
+::placeholder{
+  color: #808080;
+  font-size: 13px;
+}
+
+/* AboutUs */
+
+
+#AboutUs {
+  background-color:  #f8f8f8;
+  margin-top: 120px;
+  margin-bottom: 74px;
+  text-align: center;
+}
+  
+  /* contact us */
+  
+#AboutUs {
+  background-color:  #f8f8f8;
+  /* padding-top: 500px; */
+  text-align: center;
+}
+/* concat us */
+
+#contactUs {
+ 
+  text-decoration: none;
+  background-color: #b1a6a4;
+  border:none;
+  padding-bottom: 40px;
+}
+#contactUs a {
+  background-color: transparent;
+  background-color: #b1a6a4;
+
+}
+#RAQASHTEAM{
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5%;
+  background-color: #f1f1f1;
+  color: #5c5c5c;
+  text-align: center;
+  font-size: x-small;
+
+}
+ #contactUs a {
+  color: #5c5c5c;
+  text-decoration: none;
+  
+
+}
+#contactUs a:hover {
+  color: #a5afa6;
+}
+
+
+
+
+  /* top up button */
+  #myBtn{
+    display: none; 
+    position: fixed; 
+    bottom: 35px;
+    right: 30px; 
+    z-index: 99;
+    border: none;
+    outline: none; 
+    background-color: #ede9ea;
+    color: white; 
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 100px; 
+    font-size: 18px; 
+  }
+
+#myBtn:hover{
+    background-color: #f1f1f1;
+  }
+
+  #bg-model{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position:fixed;
+    top: 0;
+    display: none;
+  }
+
+  .Msgcontainer{
+    background: #a49c9a ;
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+    margin: 20px auto;
+    border-radius:10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.13);
+        }
+  
+  .Msgcontainer .left{
+    float: left;
+    margin: 0 0 0 -20px;
+    width: 50%;
+    height:400px;
+    background:#a49c9a ;
+    overflow: hidden;
+    }
+  
+  .Msgcontainer .right{
+    float: right;
+    margin: 0 -20px 0 0;
+    width: 50%;
+    height:400px;
+    background:#f8f8f8 ;
+    overflow: hidden;
+    }
+  
+  .Msgformbox{
+    position: relative;
+    padding: 60px 70px;
+    margin-left: -10px;
+    box-sizing: border-box;
+    height: 500px;
+    text-decoration: none;
+    margin-top: 10%;
+  
+  }
+  
+  .list, .list-unstyled{
+      text-align: left;
+  
+  }
+  .contact{
+      padding-top: 50px;
+  }
+  
+  .contact li {
+      font-size: small;
+      display: inline;
+      
+  }
+  
+  .contact li a{
+      color: #5c5c5c;
+      text-decoration: none;
+  }
+  
+  .contact li a:hover{
+      color: #ede9ea;
+      text-decoration: none;
+  }
+  .list-unstyled h4{
+  padding-bottom: 10px;
+  margin-left: 10px;
+  }
+  .Msgbox{
+  position: relative;
+  text-align: center;
+  padding: 115px 20px;
+  box-sizing: border-box;
+  height: 500px;
+  }
+  
+  #msg{
+  margin-bottom: 10px;
+  height: 150px;
+  }
+  
+          
+  .Msgcontainer .left input{
+  margin-bottom: 30px;
+  height: 30px;
+  width: 300px;
+  }
+  
+  
+  .Icon-twitter{
+    font-size: small;
+    margin-left: 19%;
+    margin-top: 0%;
+      }
+  
+  
+  .logoContact{
+     position: absolute;
+     right:15%;
+     top:15%;
+  }
+  
+  
+  
+  
